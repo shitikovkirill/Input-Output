@@ -16,23 +16,14 @@ public void copy(String from_name, String to_name) throws  IOException{
 	if(!from_file.canRead()) abort ("Исходний файл не доступен для чтения " + from_name);
 	
 	if(to_file.isDirectory()){
-		to_file = new File(to_name, from_file.getName());
+		to_file = new File(to_name, "copy"+from_file.getName());
 		System.out.println("--to "+to_name +"  --from "+from_file);
 	}
 	
 	if(to_file.exists()){
 		if (!to_file.canWrite()) abort( "конечный файл не доступен для записи! " + to_name);
-			
-			String parent = to_file.getParent();
-			if (parent == null) parent = System.getProperty( "user dir");
-			File dir = new File(parent);
-			if (!dir.exists()) abort("каталог назначения не существует"+parent);
-			if (to_file.isDirectory())
-				to_file = new File(to_file, from_file.getName());
-			if (to_file.exists()){
-				if (!to_file.canWrite()) abort("konechniy fail ne dostupen");
-			}
-	}
+	} 
+	
 	FileInputStream from = null; 
 	FileOutputStream to = null;
 	try{

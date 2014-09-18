@@ -8,7 +8,7 @@ import java.io.IOException;
 import org.junit.Test;
 
 public class TestDeleteFile {
-	DeleteFile workwf = new DeleteFile();
+	DeleteFile delete = new DeleteFile();
 
 	@Test
 	public void deleteTest() {
@@ -20,13 +20,13 @@ public class TestDeleteFile {
 			e.printStackTrace();
 		}
 		assertTrue(file.exists());
-		workwf.delete("testfil.txt");
+		delete.delete("testfil.txt");
 		assertFalse(file.exists());
 	}
 	
 	@Test (expected = IllegalArgumentException.class)
 	public void deleteExeptionNoFileTest(){
-		workwf.delete("t");
+		delete.delete("t");
 	}
 
 }
