@@ -6,24 +6,25 @@ import java.io.IOException;
 
 
 public class FileViewer {
-	private String directory,	filename;
+	private String directory;
 	
 	public String show(File file){
-		String s = null;
+		StringBuffer s = new StringBuffer();
 		FileReader in = null;
 		try {
 			in = new FileReader(file);
 			char[] buffer = new char[4096];
 			int len;
 			while((len = in.read(buffer)) != - 1) {
-				s = new String(buffer, 0, len);
+				s.append(new String(buffer, 0, len));
 			}
 		} catch (IOException e) {
 		}finally { 
 		try { if (in!=null) in.close(); 
 			} catch (IOException ex) {} 
 		}
-		return s;
+		
+		return s.toString();
 
 	}
 	

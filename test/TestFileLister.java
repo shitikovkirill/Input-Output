@@ -27,7 +27,7 @@ public class TestFileLister {
 	}
 	@Test
 	public void fileInfoTest(){
-		FileLister fl = new FileLister();
+		FileLister fl = new FileLister( );
 	System.out.println(fl.fileInfo(null, "testf.txt"));
 	}
 

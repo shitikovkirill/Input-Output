@@ -24,6 +24,8 @@ public void copy(String from_name, String to_name) throws  IOException{
 		if (!to_file.canWrite()) abort( "конечный файл не доступен для записи! " + to_name);
 	} 
 	
+	
+	
 	FileInputStream from = null; 
 	FileOutputStream to = null;
 	try{
