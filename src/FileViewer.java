@@ -8,7 +8,10 @@ import java.io.IOException;
 public class FileViewer {
 	private String directory;
 	
+	
+	
 	public String show(File file){
+		
 		StringBuffer s = new StringBuffer();
 		FileReader in = null;
 		try {
@@ -25,7 +28,6 @@ public class FileViewer {
 		}
 		
 		return s.toString();
-
 	}
 	
 	public String show (String directory, String filename){
