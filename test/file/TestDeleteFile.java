@@ -1,3 +1,4 @@
+package file;
 
 
 import static org.junit.Assert.*;
@@ -6,6 +7,8 @@ import java.io.File;
 import java.io.IOException;
 
 import org.junit.Test;
+
+import file.DeleteFile;
 
 public class TestDeleteFile {
 	DeleteFile delete = new DeleteFile();

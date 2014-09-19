@@ -1,3 +1,4 @@
+package file;
 import static org.junit.Assert.*;
 
 import java.io.FileWriter;
