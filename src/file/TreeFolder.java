@@ -8,8 +8,12 @@ public class TreeFolder {
 	
 	ArrayList<MyFile> arl = new <MyFile> ArrayList();
 	
+	public ArrayList<MyFile> sortList(){
+		
+		return arl;
+	}
 
-public ArrayList<MyFile>  listFiles (File file){
+	public ArrayList<MyFile>  listFiles (File file){
 	
 	arl.add(addMyFile(file));
 	
@@ -26,6 +30,9 @@ public ArrayList<MyFile>  listFiles (File file){
 	}
 		return arl;
 	}
+
+
+
 private MyFile addMyFile(File file){
 	return new MyFile(
 			file.getName(),
@@ -34,7 +41,7 @@ private MyFile addMyFile(File file){
 			);
 }
 
-	public class MyFile{
+	public class MyFile implements Comparable<MyFile>{
 		private String name;
 		private long size;
 		private Date date;
@@ -43,6 +50,11 @@ private MyFile addMyFile(File file){
 			this.size=size;
 			this.date=date;
 		}
+		
+		public int compareTo(MyFile myFile) {
+		    int result = name.compareTo(myFile.name);
+		    return result;
+		  }
 		
 		public String getName(){
 			return name;
