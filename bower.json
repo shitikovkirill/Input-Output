@@ -1,0 +1,20 @@
+{
+  "name": "single-page-catalog",
+  "description": "Small description for single-page-catalog goes here",
+  "main": "",
+  "authors": [
+    "Shitikov <sh.kiruh@gmail.com>"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/shitikovkirill/SinglePageCatalog",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap-sass": "^3.3.7"
+  }
+}
