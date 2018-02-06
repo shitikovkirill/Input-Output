@@ -1,7 +1,8 @@
 import Controller from '@ember/controller';
+import { alias } from '@ember/object/computed';
 
 export default Controller.extend({
-  sighting: Ember.computed.alias('model.sighting'),
+  sighting: alias('model.sighting'),
   actions: {
     update() {
       if (this.get('sighting').get('hasDirtyAttributes')) {
