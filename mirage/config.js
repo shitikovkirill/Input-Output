@@ -5,24 +5,24 @@ export default function () {
     return {
       data: [{
         type: 'sighting',
-        id: 'grand-old-mansion',
+        id: '1',
         attributes: {
           location: 'Atlanta',
-          sightedAt: new Date('2012-10-24')
+          sighted_at: new Date('2012-10-24')
         }
       }, {
         type: 'sighting',
-        id: 'urban-living',
+        id: '2',
         attributes: {
           location: 'Calloway',
-          sightedAt: new Date('2012-09-24')
+          sighted_at: new Date('2012-09-24')
         }
       }, {
         type: 'sighting',
-        id: 'downtown-charm',
+        id: '3',
         attributes: {
           location: 'Asilomar',
-          sightedAt: new Date('2012-12-24')
+          sighted_at: new Date('2012-12-24')
         }
       }]
     };
@@ -34,8 +34,8 @@ export default function () {
           type: 'witness',
           id: '1',
           attributes: {
-            'f-name': "Todd",
-            'l-name': "Gandee",
+            'f_name': "Todd",
+            'l_name': "Gandee",
             email: "test@gmail.com"
           }
         },
@@ -43,8 +43,8 @@ export default function () {
             type: 'witness',
             id: '2',
             attributes: {
-              'f-name': "Nekit",
-              'l-name': "Shitikov",
+              'f_name': "Nekit",
+              'l_name': "Shitikov",
               email: "nekit@gmail.com"
             }
           }]
@@ -57,8 +57,8 @@ export default function () {
           id: '1',
           attributes: {
             'name': "Chudo",
-            'cryptid-type': "middle",
-            'profile-img': "img1"
+            'cryptid_type': "middle",
+            'profile_img': "assets/images/cryptids/chupacabra_th.png"
           }
         },
           {
@@ -66,8 +66,31 @@ export default function () {
             id: '2',
             attributes: {
               'name': "Texx",
-              'cryptid-type': "middle",
-              'profile-img': "img2"
+              'cryptid_type': "middle",
+              'profile_img': "assets/images/cryptids/loch_ness_th.png"
+            }
+          }
+        ]
+      }
+    }),
+    this.get('cryptids/:cryptid_id', function () {
+      return {
+        data: [{
+          type: 'cryptid',
+          id: '1',
+          attributes: {
+            'name': "Chudo",
+            'cryptid_type': "middle",
+            'profile_img': "assets/images/cryptids/chupacabra_th.png"
+          }
+        },
+          {
+            type: 'cryptid',
+            id: '2',
+            attributes: {
+              'name': "Texx",
+              'cryptid_type': "middle",
+              'profile_img': "assets/images/cryptids/loch_ness_th.png"
             }
           }
         ]
