@@ -66,19 +66,19 @@ export default function () {
     return {
       data: sightings
     };
-  }),
+  });
 
     this.get('/witnesses', function () {
       return {
         data: witnesses
       }
-    }),
+    });
 
     this.get('/cryptids', function () {
       return {
         data: cryptids
       }
-    })
+    });
 
   this.get('/cryptids/:cryptid_id', function (db, request) {
     return {
